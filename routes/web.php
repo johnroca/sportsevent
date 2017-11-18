@@ -24,5 +24,19 @@ Route::post('/school/add', 'SchoolController@register')->name('register-school')
 Route::get('/event', 'EventController@index')->name('event');
 Route::get('/event', 'EventController@save')->name('save_event');
 
+Route::get('/homeSport', 'SportController@index');
+
+Route::get('/addSport', 'SportController@add')->name('addEvent');
+
+Route::post('/addSport',
+	[
+		'as' => 'save_sport',
+		'uses' => 'SportController@save'
+	] 
+);
+
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/confirmschool', 'ConfirmTableController@controlPage')->name('confirmschool');
 

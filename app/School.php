@@ -9,4 +9,6 @@ class School extends Model
     protected $fillable = [
     	'school_name','event_id'
 	];
+
+   protected $table = 'school';
 }

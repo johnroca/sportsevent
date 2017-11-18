@@ -14,7 +14,19 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                   <!--  <table class="table-responsive">
+                        <tr>
+                            <thead>
+                            <th></th>
+                            <th></th>
+                            </thead>
+                        </tr>
+                        <tbody>
+                        <tr>
+                            
+                        </tr>
+                        </tbody>
+                    </table> -->
                 </div>
             </div>
         </div>
