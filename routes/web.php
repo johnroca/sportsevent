@@ -11,6 +11,13 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/school/add', 'SchoolController@add')->name('add-school');
+Route::post('/school/add', 'SchoolController@register')->name('register-school');
+
 Auth::routes();
 
 Route::get('/homeSport', 'SportController@index');
