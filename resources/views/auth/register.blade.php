@@ -61,6 +61,24 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('user_type') ? ' has-error' : '' }}">
+                            <label for="user_type" class="col-md-4 control-label">user_type</label>
+
+                            <div class="col-md-6">
+                                <select name="user_type" class="form-control">
+                                    <option selected disabled>-- User type --</option>
+                                    <option value="2">School Delegate Admin</option>
+                                    <option value="3">Player</option>
+                                </select>
+
+                                @if ($errors->has('user_type'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('user_type') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
