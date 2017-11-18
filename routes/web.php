@@ -14,7 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Auth::routes();
+
+
+Auth::routes();
+
+Route::get('/event', 'EventController@index')->name('event');
+Route::post('/event', 
+  ['as' => 'save_event', 'uses' => 'EventController@save']);
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 
 Route::get('/school/add', 'SchoolController@add')->name('add-school');
 Route::post('/school/add', 'SchoolController@register')->name('register-school');
