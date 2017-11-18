@@ -21,3 +21,4 @@ Route::post('/school/add', 'SchoolController@register')->name('register-school')
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/confirmschool', 'ConfirmTableController@controlPage')->name('confirmschool');
