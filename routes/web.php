@@ -11,10 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/save-school', 'HomeController@save_school');
+Route::get('/homeSport', 'SportController@index');
+
+Route::get('/addSport', 'SportController@add')->name('addEvent');
+
+Route::post('/addSport',
+	[
+		'as' => 'save_sport',
+		'uses' => 'SportController@save'
+	] 
+);
+
+
+
+
+

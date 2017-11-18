@@ -26,8 +26,4 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function save_school()
-    {
-        return view('save_school');
-    }
 }
