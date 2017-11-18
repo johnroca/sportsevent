@@ -32,6 +32,5 @@ Route::post('/addSport',
 );
 
 
-
-
-
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/confirmschool', 'ConfirmTableController@controlPage')->name('confirmschool')
