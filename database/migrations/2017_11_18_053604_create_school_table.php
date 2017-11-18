@@ -13,11 +13,11 @@ class CreateSchoolTable extends Migration
      */
     public function up()
     {
-        Schema::create('school', function (Blueprint $table) {
+        Schema::create('schools', function (Blueprint $table) {
             $table->increments('school_id');
             $table->string('school_name');
             $table->string('status')->default('unconfirmed');
-            $table->integer('event_id');
+            $table->integer('event_id')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateSchoolTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('school');
+        Schema::dropIfExists('schools');
     }
 }
